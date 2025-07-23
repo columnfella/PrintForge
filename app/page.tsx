@@ -1,4 +1,5 @@
 import HeroImage from "@/public/hero-image.png"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -18,10 +19,11 @@ export default function Home() {
 
           <div className="flex gap-4">
             <button
-              href="/3d-models"
               className="px-6 py-3 text-black transition duration-100 bg-white border-2 border-black hover:bg-black hover:text-white"
             >
-              Browse Models
+              <Link href="/3d-models">
+                Browse Models
+              </Link>
             </button>
           </div>
         </div>
