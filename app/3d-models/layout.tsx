@@ -1,18 +1,14 @@
-import type { RootLayoutProps } from "@/app/types"
-import { getAllCategories } from "../lib/categories";
-import Link from "next/link"
+import type { ReactNode } from "react"
+import CategoriesNav from "@/app/components/CategoriesNav"
 
-export default function RootLayout({ children }: RootLayoutProps) {
-    const allCategories = getAllCategories().map((cat)=><p><Link href={`/3d-models/categories/${cat.slug}`}>{cat.displayName}</Link></p>)
+export default function ModelsLayout({ children }: { children: ReactNode }) {
+  
+  return (
+    <div className="relative flex flex-col min-h-screen md:flex-row">
+      <CategoriesNav />
 
-    return (
-    <main>
-        <nav>
-            {allCategories}
-        </nav>
-        <section>
-            {children}
-        </section>
-    </main>
-  );
+      {/* Main Content Area */}
+      <main className="flex-1 p-4 md:ml-64">{children}</main>
+    </div>
+  )
 }

@@ -2,7 +2,7 @@ import { FaRegHeart } from "react-icons/fa6"
 import Pill from "@/app/components/Pill"
 import type { ModelDetailPageProps } from "@/app/types"
 import { getModelById } from "@/app/lib/models"
-import placeholderImg from "@/public/placeholder.jpg"
+import placeholderImg from "@/public/placeholder.jpeg"
 
 export default async function ModelDetailPage({ params }: ModelDetailPageProps) {
   const { id } = await params
